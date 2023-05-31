@@ -3,12 +3,14 @@
 
 #include <iostream>
 
+// 프로필 출력 함수
 int Profile(int age1)
 {
 	printf("당신의 이름은  김형준이고, 전화번호는 010-0000-0000 당신의 나이는 %d 입니다. ", age1);
 	return age1;
 }
 
+// 크리티컬 히트 함수
 int CritHit(int normal)
 {
 	
@@ -20,10 +22,9 @@ int CritHit(int normal)
 
 }
 
+
+// 사칙연산 각 함수
 int result = 0;
-
-
-
 int Sum_(int num1, int num2)
 {
 	result = num1 + num2;
@@ -44,6 +45,9 @@ int Div_(int num1, int num2)
 	result = num1 / num2;
 	return result;
 }
+
+
+//2개의 int 값을 받으면 5가지 계산해서 출력해주는 함수 
 void Calcul(int num1, int num2)
 {
 	printf("%d 더해진 값입니다.\n", num1 + num2);
@@ -54,6 +58,7 @@ void Calcul(int num1, int num2)
 	
 }
 
+//힐해주는 함수(삼항연산)
 int Healling(int heal)
 {
 	// 힐량은 어느 수치를 받더라도  50을 넘기면 안됨 
@@ -78,16 +83,17 @@ int Healling(int heal)
 int main()
 {
    
-	//profile(27);
+	/*// 프로필 출력
+	profile(27);
 
 
-	//int number = 10;  // intger가 정수. 그러니 정수를 저장하기 위한 데이터 타입으로 줄임말인 int를 썼다
+	int number = 10;  // intger가 정수. 그러니 정수를 저장하기 위한 데이터 타입으로 줄임말인 int를 썼다
 
-	//int number2 = 0.6;  // 출력 결과 0
+	int number2 = 0.6;  // 출력 결과 0
 
-	//float number3 = 1.6;
+	float number3 = 1.6;
 
-	//CritHit(100);
+	CritHit(100);*/
 
 	//-------------------------------------------------------------------------------------
 
@@ -114,65 +120,71 @@ int main()
 	//--------------------------------------------------------------------
 	
 	
+	/*  // 단항연산 + 이항연산 
+	int num1 = 10;
+	int num2 = 12;
+	int result = 0;
 
-	//int num1 = 10;
-	//int num2 = 12;
-	//int result = 0;
+	result = result + (num1 + num2);
+	result += (num1 + num2);
 
-	//result = result + (num1 + num2);
-	//result += (num1 + num2);
-
-	//printf("num1 : %d \n", num1++);
-	//printf("num1 : %d \n", ++num1);
-
-
-	//int someNumber = 0;
-	//someNumber = someNumber++;
-	//printf("%d\n", someNumber);   // C++ 과 C# 값이 다르다 .
+	printf("num1 : %d \n", num1++);
+	printf("num1 : %d \n", ++num1);
 
 
-	//printf("%d + %d = %d \n", num1, num2, result);
-	//printf("%d - %d = %d \n", num1, num2, num1 - num2);
-	//printf("%d * %d = %d \n", num1, num2, num1 * num2);
-	//printf("%d / %d = %d \n", num1, num2, num1 / num2);
-	//printf("%d %% %d = %d \n", num1, num2, num1 % num2);
+	int someNumber = 0;
+	someNumber = someNumber++;
+	printf("%d\n", someNumber);   // C++ 과 C# 값이 다르다 .
 
+
+	printf("%d + %d = %d \n", num1, num2, result);
+	printf("%d - %d = %d \n", num1, num2, num1 - num2);
+	printf("%d * %d = %d \n", num1, num2, num1 * num2);
+	printf("%d / %d = %d \n", num1, num2, num1 / num2);
+	printf("%d %% %d = %d \n", num1, num2, num1 % num2);*/
+	//=====================================================
+	
+	//힐해주는 함수사용
 	//Healling(50);
+	
+
 	//---------------------------------------------------------
+	
+
+	// 곱 합 부정 조건 참 거짓
 	/*
+	int num1 = 10;
+	int num2 = 12;
+
 	int result1 = 0;
 	int result2 = 0;
-	int result3 = 0;*/
+	int result3 = 0;
 
-	//int num1 = 10;
-	//int num2 = 12;
+	result1 = num1 != num2;
+	result2 = num1 <= num2;
+	result3 = num1 > num2;
+	
 
-	//int result4 = 0;
-	//int result5 = 0;
-	//int result6 = 0;
-
-	////result1 = num1 != num2;
-	////result2 = num1 <= num2;
-	////result3 = num1 > num2;
-	////
-
-	//result4 = ((num1 == 10) && (num2 == 12));
-	//result5 = ((num1 <12) || (num2 > 12));
-	//result6 = (!num1);
+	result1 = ((num1 == 10) && (num2 == 12));
+	result2 = ((num1 <12) || (num2 > 12));
+	result3 = (!num1);
 
 
-	///*printf("%d \n", result1);
-	//printf("%d \n", result2);
-	//printf("%d \n", result3);*/
+	/*printf("%d \n", result1);
+	printf("%d \n", result2);
+	printf("%d \n", result3);
 
-	//printf("사%d \n", result4);
-	//printf("오%d \n", result5);
-	//printf("윳%d \n", result6);
+	printf("참 거짓%d \n", result1);
+	printf("참 거짓%d \n", result2);
+	printf("참 거짓%d \n", result3);
 
-	////장비 , 퀘스트 조건등 여러가지 
+	//장비 , 퀘스트 조건등 여러가지 
+	*/
 
 
 	////--------------------------
+
+
 
 	//int age = 15;
 	//bool boolResult;
@@ -196,21 +208,16 @@ int main()
 
 
 	//가위 바위 보 함수 만들기 플레이어는 1,2,3 중에 하나를 입력받는다 
+    //컴퓨터는 2고정 
 
-	printf("가위는 1, 바위는 2, 보는 3 입니다 . 하나를 입력해주세요-->");
-	int inputNumber = 0;
-
-	scanf_s("%d", &inputNumber);
-
-	int user = inputNumber;
-	int com = 2;
+	printf("가위는 1, 바위는 2, 보는 3 입니다.\n입력 대기중_____\n");
+	
+	int P_in = 0;
+	scanf_s("%d", &P_in);
+	
 	bool result;
+	result = (P_in == 3) ? printf("이기셨습니다.") : (P_in == 2) ? printf("비겼습니다.") : printf("패배했습니다.");
 
-	result = (inputNumber == 3) ? printf("승리!!") : (inputNumber == 2) ? printf("비김") : printf("패배");
-
-	
-	
-	
 
 }
 
