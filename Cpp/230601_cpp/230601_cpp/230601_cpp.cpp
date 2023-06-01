@@ -242,15 +242,14 @@ while (10>= loop_c)
 																													* * * * * * * * * *
 */
 
-
-
-
+//-----------------------------------------------------------------------------------------------------------------------------------
 
 user_input();
 	
 int user_count_x = 0;
 int user_count_y = 0;
 // 나중에 추가할 것 = 3 ~ 10 까지의 범위를 입력하고 그 외에는 잘못입력했다고 출력 
+// 추가완료
 
 	while (user_count_x <= u_input)
 	{
@@ -259,16 +258,22 @@ int user_count_y = 0;
 		{
 			return 0;
 		}
-
-		printf("* ");
-		user_count_x += 1;
-		if (user_count_x == u_input)
+		if (u_input >= 3 && u_input <= 10)
 		{
-			printf("\n");
-			user_count_x = 0;
-			user_count_y += 1;
+			printf("* ");
+			user_count_x += 1;
+			if (user_count_x == u_input)
+			{
+				printf("\n");
+				user_count_x = 0;
+				user_count_y += 1;
+			}
 		}
-		
+		else
+		{
+			printf("3~10 까지의 숫자를 입력해주십시오.");
+			return 0;
+		}
 		//수정 전
 		/*else if (user_check_count == u_input)
 		{
@@ -290,6 +295,7 @@ void user_input()
 	printf("3 ~ 10 의 숫자를 입력해주세요:");
 	scanf_s("%d", &u_input);
 }
+//}입력받는 함수
 /*
 //문자 입력받는 함수
 void ch_input()
