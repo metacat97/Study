@@ -5,7 +5,7 @@
 
 
 //나중에 다시 추가해야함
-
+// 0605 추가 예정
 void random_study();
 
 int main()
