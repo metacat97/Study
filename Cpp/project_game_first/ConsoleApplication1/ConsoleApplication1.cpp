@@ -38,7 +38,7 @@ int enemy_attack();
 
 //int battle();
 int battle_result();
-
+int healling();
 
 int status_update();
 
@@ -155,36 +155,36 @@ int battle_result(int hp)
 
 
 
-
-//텍스트 출력 함수
-void drew_game_text()
-{
-    //추가할 것 출력 시간 줘서 메시지 ㅁ느리게 출력
-    for (int i = 0; control_key() == SUBMIT; i++)
-    {
-        switch (i)
-        {
-        case 0:
-        {
-            printf("\n\n           여기는 어디지...\n\n\n");
-        }
-        break;
-        case 1:
-        {
-            system("cls");
-            printf("\n\n           여기는 어디지2...\n\n\n");
-
-        }
-        break;
-        default:
-        {
-            break;
-        }
-        break;
-        }
-
-    }
-}
+//
+////텍스트 출력 함수
+//void drew_game_text()
+//{
+//    //추가할 것 출력 시간 줘서 메시지 ㅁ느리게 출력
+//    for (int i = 0; control_key() == SUBMIT; i++)
+//    {
+//        switch (i)
+//        {
+//        case 0:
+//        {
+//            printf("\n\n           여기는 어디지...\n\n\n");
+//        }
+//        break;
+//        case 1:
+//        {
+//            system("cls");
+//            printf("\n\n           여기는 어디지2...\n\n\n");
+//
+//        }
+//        break;
+//        default:
+//        {
+//            break;
+//        }
+//        break;
+//        }
+//
+//    }
+//}
 
 
 
@@ -195,8 +195,8 @@ void game_screen_main()
     printf("\n\n\n\n");
     printf("□□□□□□□□□□□□□□□□□□□□  □□□□□□□□□□□□□□□□□□□□\n");
     printf("========================================  ========================================\n");
-    printf("                                  이곳은  가#■a◎             \n\n");
-    printf("                                  당신의  운에따라             \n");
+    printf("                                  이곳은  당신이 도착한 공간          \n\n");
+    printf("                                  당신의  운명에따라             \n");
     printf("                                  장소가  달라집니다.          \n\n");
 
 }
@@ -348,13 +348,13 @@ int random_option(int hp)
         {
             printf("아무런 일도 일어나지 않았습니다.\n");
             printf("체력이 회복됩니다.\n");
-            return hp;
+            
+            return hp + 10;
             
         }
         return hp;
     }
 }
-
 
 
 //캐릭터 스텟 관련 정보창
@@ -602,7 +602,8 @@ int screen_main()
 //선택 화면
 int game_choice_main()
 {
-    int hp = 100;
+    int hp = 50;
+    
     while (1)
     {
         
