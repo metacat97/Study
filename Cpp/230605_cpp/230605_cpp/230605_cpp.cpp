@@ -31,9 +31,11 @@ int main()
     char board[5] = { 0, };
     //변수 선언 및 초기화 끝
     int test = 1;
+    
+    
     while(1)
     {
-        user_input;
+        
         switch (user_input)
         {
         case 'a':
