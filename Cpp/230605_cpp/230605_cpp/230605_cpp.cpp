@@ -24,29 +24,46 @@ int main()
     //hard 과제 시작
 
     //변수 선언 및 초기화 시작
-    int user_input = _getch();
+    char user_input = _getch();
     int i = 0;
     int j = 0;
-    int count_num = 1;
+    int count_num = 0;
     char board[5] = { 0, };
-    //변수 선언 및 초기화 끝
-    int test = 1;
+    ////변수 선언 및 초기화 끝
+    //int test = 1;
+    //
+    //int i, j, tr = 0;
+    //char board[5] = { 0, }; //선언과 동시에 다 0 값으로 초기화
+    //for (tr = 0; tr < 5; tr++)
+    //{
+    //    for (i = 0; i < 5; i++)
+    //    {
+    //        board[i] = '*';
+    //        if (i == tr)
+    //        {
+    //            board[i] = '0';
+    //        }
+    //    }
+    //    for (j = 0; j < 5; j++)
+    //    {
+    //        printf("%c ", board[j]);
+    //    }
+    //    _getch();
+    //    system("cls");
+        //printf("\n");
+
     
-    
-    while(1)
+    for (;;)
     {
+        if (user_input == 'A' || user_input == 'a')
+        {
+            bool result = (count_num <= 0) ? count_num == 0 : count_num -= 1;
+        }
+        else if (user_input == 'D' || user_input == 'd')
+        {
+            bool result = (count_num >= 4) ? count_num == 4 : count_num += 1;
+        }
         
-        switch (user_input)
-        {
-        case 'a':
-        {
-            printf("a 누름");
-            // 카운트 --
-            count_num--;
-            //카운트
-            system("cls");
-
-
             for (i = 0; i < 5; i++)
             {
                 board[i] = '*';
@@ -55,41 +72,80 @@ int main()
                     board[i] = '0';
                 }
             }
-            //출력하는         for (j = 0; j < 5; j++)
-
             for (j = 0; j < 5; j++)
             {
                 printf("%c ", board[j]);
             }
-
-            printf("\n");
-        }
-        case 'd':
-        {
-            printf("d 누름");
-            count_num++;
+            user_input = _getch();
             system("cls");
+        
 
 
-            for (i = 0; i < 5; i++)
-            {
-                board[i] = '*';
-                if (i == count_num)
-                {
-                    board[i] = '0';
-                }
-            }
-            //출력하는         for (j = 0; j < 5; j++)
-
-            for (j = 0; j < 5; j++)
-            {
-                printf("%c ", board[j]);
-            }
-
-            // printf("\n");
-        }
-        }
     }
+
+
+
+
+}
+    // 
+    // 
+    //while(1)
+    //{
+    //    
+    //    switch (user_input)
+    //    {
+    //    case 'a':
+    //    {
+    //        printf("a 누름");
+    //        // 카운트 --
+    //        count_num--;
+    //        //카운트
+    //        system("cls");
+
+
+    //        for (i = 0; i < 5; i++)
+    //        {
+    //            board[i] = '*';
+    //            if (i == count_num)
+    //            {
+    //                board[i] = '0';
+    //            }
+    //        }
+    //        //출력하는         for (j = 0; j < 5; j++)
+
+    //        for (j = 0; j < 5; j++)
+    //        {
+    //            printf("%c ", board[j]);
+    //        }
+
+    //        printf("\n");
+    //    }
+    //    case 'd':
+    //    {
+    //        printf("d 누름");
+    //        count_num++;
+    //        system("cls");
+
+
+    //        for (i = 0; i < 5; i++)
+    //        {
+    //            board[i] = '*';
+    //            if (i == count_num)
+    //            {
+    //                board[i] = '0';
+    //            }
+    //        }
+    //        //출력하는         for (j = 0; j < 5; j++)
+
+    //        for (j = 0; j < 5; j++)
+    //        {
+    //            printf("%c ", board[j]);
+    //        }
+
+    //        // printf("\n");
+    //    }
+    //    }
+    //}
         
 
     
@@ -224,7 +280,7 @@ int main()
     //return 0;
 //==================================================================================
 
-}
+//}
 
 //void Description003()
 //{
