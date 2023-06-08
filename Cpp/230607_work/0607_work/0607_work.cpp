@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <time.h>
 #include <Windows.h>
+#include <conio.h>
 
 void shuffle();
 void shuffleonce();
@@ -60,122 +61,126 @@ void shuffle()
 
      // { 배열의 출력
     printf("셔플 한 후 \n\n ");
-    for (int i = 0; i < 1; i++)
-    {
+   
+        
+        for (int i = 0; i < 1; i++)
+        {
 
-        if (numbers[i] >= 1 && numbers[i] < 14)
-        {
-            Sleep(800);
-            printf("스페이드 / ");
-            if (numbers[i] == 0)
+            if (numbers[i] >= 1 && numbers[i] < 14)
             {
-                printf("에이스");
-            }
-            else if (numbers[i] == 11)
-            {
-                printf("J");
-            }
-            else if (numbers[i] == 12)
-            {
-                printf("Q");
-            }
-            else if (numbers[i] == 13)
-            {
-                printf("K");
-            }
-            else
-            {
-                printf("%d", numbers[i]);
-            }
-        }
-        else if (numbers[i] >= 14 && numbers[i] < 26)
-        {
-            Sleep(800);
-            printf("하트 / ");
-            if (numbers[i] == 0)
-            {
-                printf("에이스");
-            }
-            else if (numbers[i] == 23)
-            {
-                printf("J");
-            }
-            else if (numbers[i] == 24)
-            {
-                printf("Q");
-            }
-            else if (numbers[i] == 25)
-            {
-                printf("K");
-            }
-            else
-            {
-                for (int j = numbers[i]; j <= numbers[i]; j++)
+                Sleep(800);
+                printf("스페이드 / ");
+                if (numbers[i] == 0)
                 {
-                    numbers[i] = numbers[i] - 13;
+                    printf("에이스");
                 }
-                printf("%d", numbers[i]);
-            }
-        }
-        else if (numbers[i] >= 26 && numbers[i] < 40)
-        {
-            Sleep(800);
-            printf("다이아몬드 /");
-            if (numbers[i] == 0)
-            {
-                printf("에이스");
-            }
-            else if (numbers[i] == 37)
-            {
-                printf("J");
-            }
-            else if (numbers[i] == 38)
-            {
-                printf("Q");
-            }
-            else if (numbers[i] == 39)
-            {
-                printf("K");
-            }
-            else
-            {
-                for (int j = numbers[i]; j <= numbers[i]; j++)
+                else if (numbers[i] == 11)
                 {
-                    numbers[i] = numbers[i] - 26;
+                    printf("J");
                 }
-                printf("%d", numbers[i]);
-            }
-        }
-        else if (numbers[i] >= 40 && numbers[i] < 53)
-        {
-            Sleep(800);
-            printf("클로버 / ");
-            if (numbers[i] == 0)
-            {
-                printf("에이스");
-            }
-            else if (numbers[i] == 50)
-            {
-                printf("J");
-            }
-            else if (numbers[i] == 51)
-            {
-                printf("Q");
-            }
-            else if (numbers[i] == 52)
-            {
-                printf("K");
-            }
-            else
-            {
-                for (int j = numbers[i]; j <= numbers[i]; j++)
+                else if (numbers[i] == 12)
                 {
-                    numbers[i] = numbers[i] - 39;
+                    printf("Q");
                 }
-                printf("%d", numbers[i]);
+                else if (numbers[i] == 13)
+                {
+                    printf("K");
+                }
+                else
+                {
+                    printf("%d", numbers[i]);
+                }
             }
-        }
-
+            else if (numbers[i] >= 14 && numbers[i] < 26)
+            {
+                Sleep(800);
+                printf("하트 / ");
+                if (numbers[i] == 0)
+                {
+                    printf("에이스");
+                }
+                else if (numbers[i] == 23)
+                {
+                    printf("J");
+                }
+                else if (numbers[i] == 24)
+                {
+                    printf("Q");
+                }
+                else if (numbers[i] == 25)
+                {
+                    printf("K");
+                }
+                else
+                {
+                    for (int j = numbers[i]; j <= numbers[i]; j++)
+                    {
+                        numbers[i] = numbers[i] - 13;
+                    }
+                    printf("%d", numbers[i]);
+                }
+            }
+            else if (numbers[i] >= 26 && numbers[i] < 40)
+            {
+                Sleep(800);
+                printf("다이아몬드 /");
+                if (numbers[i] == 0)
+                {
+                    printf("에이스");
+                }
+                else if (numbers[i] == 37)
+                {
+                    printf("J");
+                }
+                else if (numbers[i] == 38)
+                {
+                    printf("Q");
+                }
+                else if (numbers[i] == 39)
+                {
+                    printf("K");
+                }
+                else
+                {
+                    for (int j = numbers[i]; j <= numbers[i]; j++)
+                    {
+                        numbers[i] = numbers[i] - 26;
+                    }
+                    printf("%d", numbers[i]);
+                }
+            }
+            else if (numbers[i] >= 40 && numbers[i] < 53)
+            {
+                Sleep(800);
+                printf("클로버 / ");
+                if (numbers[i] == 0)
+                {
+                    printf("에이스");
+                }
+                else if (numbers[i] == 50)
+                {
+                    printf("J");
+                }
+                else if (numbers[i] == 51)
+                {
+                    printf("Q");
+                }
+                else if (numbers[i] == 52)
+                {
+                    printf("K");
+                }
+                else
+                {
+                    for (int j = numbers[i]; j <= numbers[i]; j++)
+                    {
+                        numbers[i] = numbers[i] - 39;
+                    }
+                    printf("%d", numbers[i]);
+                }
+            }
+            printf("\n");
+            
+        
 
 
 
