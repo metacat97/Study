@@ -30,6 +30,7 @@ int main()
 }
 
 
+<<<<<<< HEAD:Cpp/0608_study/0608_study/0608_study.cpp
 
 void shuffleonce(int* firstnumber, int* secondnumber)
 {
@@ -137,6 +138,9 @@ void work002()
 		u_in = _getch();
 	}
 }
+=======
+
+>>>>>>> origin/main:Cpp/230608_study/0608_study/0608_study.cpp
 
 
 
