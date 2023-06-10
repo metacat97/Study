@@ -12,6 +12,8 @@ void shuffleonce(int* firstnumber, int* secondnumber);
 void  bubble_sort();
 void insert_sort();
 void study002();
+void work002();
+void shuffleonce(int* firstnumber, int* secondnumber);
 
 int main()
 {
@@ -26,100 +28,114 @@ int main()
 
 
 }
-//ㅅtest
-char char_[25] = { 0, };
-char char2_[5][5] = { 0, };
-char u_in = _getch();
-int u_x = 2;
-int u_y = 2;
-//맵과 초기 위치 출력
 
-//for (int i = 0; i < 25; i++)
-//{
-//	char_[i] = '*';
-//}
 
-while (1)
+
+void shuffleonce(int* firstnumber, int* secondnumber)
 {
+	int temp = 0;
+	temp = *firstnumber;
+	*firstnumber = *secondnumber;
+	*secondnumber = temp;
+}
 
-	if (u_in == 'w' || u_in == 'W')
+void work002()
+{
+	//ㅅtest
+	char char_[25] = { 0, };
+	char char2_[5][5] = { 0, };
+	char u_in = _getch();
+	int u_x = 2;
+	int u_y = 2;
+	//맵과 초기 위치 출력
+
+	//for (int i = 0; i < 25; i++)
+	//{
+	//	char_[i] = '*';
+	//}
+
+	while (1)
 	{
-		if (u_y > 0)
-		{
-			u_y--;
-		}
-		else
-		{
-			u_y = 0;
-		}
-	}
-	else if (u_in == 's' || u_in == 'S')
-	{
-		//u_x++;
-		if (u_y < 4)
-		{
-			u_y++;
-		}
-		else
-		{
-			printf("sss");
 
-			u_y = 4;
-
-		}
-	}
-	else if (u_in == 'a' || u_in == 'A')
-	{
-		//u_y--;
-		if (u_x > 0)
+		if (u_in == 'w' || u_in == 'W')
 		{
-			u_x--;
-		}
-		else
-		{
-			u_x = 0;
-			printf("");
-		}
-	}
-	else if (u_in == 'd' || u_in == 'D')
-	{
-		//u_y++;
-		if (u_x < 4)
-		{
-			u_x++;
-		}
-		else
-		{
-			u_x = 4;
-		}
-	}
-
-
-	for (int y = 0; y < 5; y++)
-	{
-		for (int x = 0; x < 5; x++)
-		{
-			char2_[y][x] = '*';
-
-			if (y == u_y && x == u_x)
+			if (u_y > 0)
 			{
-				char2_[y][x] = '0';
+				u_y--;
+			}
+			else
+			{
+				u_y = 0;
+			}
+		}
+		else if (u_in == 's' || u_in == 'S')
+		{
+			//u_x++;
+			if (u_y < 4)
+			{
+				u_y++;
+			}
+			else
+			{
+				printf("sss");
+
+				u_y = 4;
+
+			}
+		}
+		else if (u_in == 'a' || u_in == 'A')
+		{
+			//u_y--;
+			if (u_x > 0)
+			{
+				u_x--;
+			}
+			else
+			{
+				u_x = 0;
+				printf("");
+			}
+		}
+		else if (u_in == 'd' || u_in == 'D')
+		{
+			//u_y++;
+			if (u_x < 4)
+			{
+				u_x++;
+			}
+			else
+			{
+				u_x = 4;
 			}
 		}
 
-	}
 
-
-	system("cls");
-	for (int y = 0; y < 5; y++)
-	{
-		for (int x = 0; x < 5; x++)
+		for (int y = 0; y < 5; y++)
 		{
-			printf("%c ", char2_[y][x]);
+			for (int x = 0; x < 5; x++)
+			{
+				char2_[y][x] = '*';
+
+				if (y == u_y && x == u_x)
+				{
+					char2_[y][x] = '0';
+				}
+			}
+
 		}
-		printf("\n");
+
+
+		system("cls");
+		for (int y = 0; y < 5; y++)
+		{
+			for (int x = 0; x < 5; x++)
+			{
+				printf("%c ", char2_[y][x]);
+			}
+			printf("\n");
+		}
+		u_in = _getch();
 	}
-	u_in = _getch();
 }
 
 
