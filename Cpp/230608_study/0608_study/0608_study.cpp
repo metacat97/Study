@@ -11,7 +11,7 @@ void choice_sort();
 void shuffleonce(int* firstnumber, int* secondnumber);
 void  bubble_sort();
 void insert_sort();
-void study002();
+//void study002();
 void work002();
 void shuffleonce(int* firstnumber, int* secondnumber);
 
@@ -26,11 +26,11 @@ int main()
 //	study002();
 	
 
-
+	work002();
 }
 
 
-<<<<<<< HEAD:Cpp/0608_study/0608_study/0608_study.cpp
+//<<<<<<< HEAD:Cpp/0608_study/0608_study/0608_study.cpp
 
 void shuffleonce(int* firstnumber, int* secondnumber)
 {
@@ -138,9 +138,9 @@ void work002()
 		u_in = _getch();
 	}
 }
-=======
+//=======
 
->>>>>>> origin/main:Cpp/230608_study/0608_study/0608_study.cpp
+//>>>>>>> origin/main:Cpp/230608_study/0608_study/0608_study.cpp
 
 
 

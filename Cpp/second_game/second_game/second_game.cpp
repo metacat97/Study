@@ -133,7 +133,7 @@ void print_card()
 
 
 
-
+        //각각의 랜덤값  저장 
         first_card = rand() % 52 + 1;
         second_card = rand() % 52 + 1;
         user_card = rand() % 52 + 1;
@@ -143,7 +143,8 @@ void print_card()
 
 
 
-
+        //cards라는 배열에[랜덤값] 이 15보다 작을때 
+        //아스키 값이 있으면 else 구문으로 들어감   
         if (cards[first_card] < 15)
         {
             // printf("if 첫번==%d====\n", cards[first_card]);
