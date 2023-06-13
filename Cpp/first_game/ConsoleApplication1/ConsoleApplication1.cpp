@@ -26,7 +26,7 @@ void game_screen_main();
 void drew_game_text();
 int drew_game_option();
 int game_choice_main();
-int random_option();
+int random_option(int hp);
 int set_character();
 void character_info();
 
@@ -47,7 +47,7 @@ int main()
 {
     
     
-    
+    int count = 0;
    
     
     
@@ -301,9 +301,11 @@ int set_character()
 //랜덤 함수
 int random_option(int hp)
 {
+
+   
     int persent = 100;
     int random_c = ((rand() % persent) + 1);
-
+    
 
     int town = random_c >= 1 && random_c <= 30;
     int river = random_c >= 31 && random_c <= 50;
@@ -318,6 +320,10 @@ int random_option(int hp)
         printf("당신의 운명의 숫자는 %d \n",random_c);
         printf("이곳은 '마을'입니다.\n");
         //printf("휴식을 취해 HP가 회복됩니다."); //회복함수 
+        
+        printf("현재 마을을 회 방문했습니다.");
+        
+
         return hp;
     }
     else if (river == 1)
@@ -327,7 +333,7 @@ int random_option(int hp)
         printf("당신의 운명의 숫자는 %d \n", random_c);
         printf("이곳은 '바다'입니다.\n");
         //printf("HP가 소폭 하락합니다.");
-        return hp;
+        return hp - 5;
     }
     else if (mountain == 1)
     {
@@ -341,7 +347,7 @@ int random_option(int hp)
 
             printf("적과 조우합니다.\n");// 배틀 함수 시작
             printf("싸움이 시작됩니다.\n\n\n");
-            hp = battle_result(hp);
+            hp = battle_result(hp) - 40;
         }
         //피할 확률
         else if (heal == 1)
@@ -603,7 +609,8 @@ int screen_main()
 int game_choice_main()
 {
     int hp = 50;
-    
+    int count = 0;
+
     while (1)
     {
         
@@ -613,8 +620,11 @@ int game_choice_main()
             hp = random_option(hp);
             //리턴값은 랜덤 값이 되도록 다른 곳에서 해야겠네 
             //  선택 값 설정
-           
-           
+            if (hp <= 0)
+            {
+                printf("Game Over");
+                return 0;
+            }
         }
         else if (game_code == 1)
         {
