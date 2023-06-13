@@ -11,9 +11,9 @@ void choice_sort();
 void shuffleonce(int* firstnumber, int* secondnumber);
 void  bubble_sort();
 void insert_sort();
-//void study002();
+void study002();
 void work002();
-void shuffleonce(int* firstnumber, int* secondnumber);
+
 
 int main()
 {
@@ -23,10 +23,10 @@ int main()
 	//bubble_sort();
 	//insert_sort();
 
-//	study002();
+	study002();
 	
 
-	work002();
+	//work002();
 }
 
 
@@ -262,13 +262,7 @@ void study002()
 
 }
 
-void shuffleonce(int* firstnumber, int* secondnumber)
-{
-	int temp = 0;
-	temp = *firstnumber;
-	*firstnumber = *secondnumber;
-	*secondnumber = temp;
-}	
+
 
 void insert_sort()
 {
